@@ -790,10 +790,115 @@
   .footer-brand { color: rgba(255,255,255,0.65); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; }
   .footer-contact { color: rgba(255,255,255,0.45); font-size: 10.5px; }
 
+  /* ─── READABILITY / RESPONSIVE / PRINT OVERRIDES ─── */
+  body { font-size: 13.5px; }
+  .page { width: min(960px, 100%); }
+  .page-body { padding: 34px 44px 38px; }
+  .page-header h1 { font-size: 26px; }
+  .page-header .subtitle { font-size: 13px; }
+  .header-badge,
+  .section-title,
+  .direction-label,
+  .footer-brand { font-size: 11.5px; }
+  .direction-title { font-size: 24px; }
+  .direction-copy,
+  .impact-text,
+  .sales-cta-sub,
+  .solution-sub,
+  .quick-target,
+  .sales-merit-text,
+  .opportunity-body,
+  .scene-body,
+  .step-desc,
+  .notice-box,
+  .faq-a,
+  .price-note,
+  .billing-body,
+  .target-text { font-size: 12.5px; line-height: 1.75; }
+  .faq-q,
+  .step-title,
+  .sales-merit-title,
+  .impact-title { font-size: 13px; }
+  .footer-contact { font-size: 11.5px; }
+
+  @media screen and (max-width: 768px) {
+    body { padding-top: 0; background: #fff; font-size: 14px; }
+    .doc-nav {
+      position: sticky;
+      height: auto;
+      display: block;
+      padding: 8px 10px;
+    }
+    .nav-title {
+      border-right: 0;
+      margin: 0 0 6px;
+      padding: 0;
+      text-align: center;
+    }
+    .nav-links {
+      overflow-x: auto;
+      padding: 0 0 2px;
+      scrollbar-width: thin;
+    }
+    .nav-links a { padding: 7px 10px; font-size: 12px; }
+    .page {
+      width: 100%;
+      margin: 0 0 16px;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .page-header {
+      display: block;
+      padding: 22px 18px;
+    }
+    .header-right { text-align: left; margin-top: 12px; }
+    .page-body { padding: 22px 16px 26px; }
+    .direction-hero,
+    .solution-banner,
+    .sales-cta-strip {
+      display: block;
+      padding: 18px;
+    }
+    .solution-price { margin-top: 12px; text-align: left; }
+    .pain-grid,
+    .impact-grid,
+    .opportunity-grid,
+    .quick-targets,
+    .sales-merit-grid,
+    .target-grid,
+    .scene-grid,
+    .faq-grid,
+    .billing-grid { grid-template-columns: 1fr; }
+    .before-after { grid-template-columns: 1fr; gap: 8px; }
+    .ba-arrow { transform: rotate(90deg); margin: 2px 0; }
+    .flow-row { display: block; }
+    .flow-step { margin-bottom: 8px; }
+    .flow-arrow { justify-content: center; transform: rotate(90deg); margin: 4px 0; }
+    .price-table,
+    .plan-table,
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .page-footer { display: block; padding: 10px 16px; }
+    .footer-contact { margin-top: 4px; }
+  }
+
   @media print {
+    @page { size: A4 landscape; margin: 8mm; }
     body { background: white; padding-top: 0; }
     .doc-nav { display: none; }
-    .page { margin: 0; box-shadow: none; border-radius: 0; scroll-margin-top: 0; }
+    .page {
+      width: 100%;
+      min-height: 190mm;
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0;
+      scroll-margin-top: 0;
+      page-break-after: always;
+    }
+    .page-body { padding: 22px 30px 24px; }
   }
 </style>
 </head>
