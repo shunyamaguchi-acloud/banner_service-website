@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>定額制バナー制作プラン｜VOTEC IMCご契約店舗様向け</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232F7890'/%3E%3Cpath d='M14 18h36v8H14zM14 30h28v8H14zM14 42h20v8H14z' fill='%23fff'/%3E%3Ccircle cx='49' cy='45' r='7' fill='%23E3B23C'/%3E%3C/svg%3E">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 
   :root {
     --primary: #2F7890;
@@ -119,6 +120,30 @@
   }
 
   .page-body { padding: 30px 40px 34px; flex: 1; }
+  .page-guide {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f4fbfd;
+    border: 1px solid #cfe9f0;
+    border-left: 6px solid var(--primary);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 0 0 18px;
+    color: var(--primary-dark);
+    line-height: 1.55;
+  }
+  .page-guide-label {
+    flex: 0 0 auto;
+    background: var(--primary);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+  .page-guide-text { font-size: 13px; font-weight: 800; }
 
   /* ─── HEADER ─── */
   .page-header {
@@ -143,10 +168,12 @@
     margin-bottom: 8px;
   }
   .page-header h1 {
-    font-family: 'Noto Serif JP', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 21px;
+    font-weight: 900;
     color: #fff;
     line-height: 1.45;
+    letter-spacing: 0.02em;
   }
   .page-header .subtitle {
     font-size: 10.5px;
@@ -847,6 +874,71 @@
   .matrix-table td { padding: 12px 14px; }
   .footer-contact { font-size: 11.5px; }
 
+  /* ─── PRIORITY READING BALANCE ─── */
+  .direction-hero {
+    padding: 24px 28px;
+    margin-bottom: 14px;
+  }
+  .direction-title {
+    font-size: 28px;
+    line-height: 1.32;
+    margin-bottom: 10px;
+  }
+  .direction-copy {
+    font-size: 14.5px;
+    line-height: 1.85;
+    max-width: 760px;
+  }
+  .hero-catch {
+    font-size: 15.5px;
+    padding: 8px 13px;
+  }
+  .sales-cta-main {
+    font-size: 15px;
+  }
+  .sales-cta-sub {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .impact-grid,
+  .sales-merit-grid,
+  .quick-targets,
+  .opportunity-grid,
+  .target-grid,
+  .scene-grid,
+  .faq-grid,
+  .billing-grid {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .impact-card,
+  .sales-merit-card,
+  .opportunity-card,
+  .target-card,
+  .scene-card,
+  .faq-item,
+  .billing-card {
+    padding: 10px 12px;
+  }
+  .section-title {
+    margin-bottom: 9px;
+  }
+  .quick-target {
+    padding: 9px 11px;
+  }
+  .before-after {
+    margin-bottom: 10px;
+  }
+  .flow-step {
+    padding: 11px 9px;
+  }
+  .notice-box,
+  .info-box,
+  .price-note {
+    padding: 9px 12px;
+    margin-bottom: 12px;
+  }
+
   @media screen and (max-width: 980px) {
     body { padding-top: 0; background: #fff; font-size: 14px; }
     .doc-nav {
@@ -879,12 +971,17 @@
     }
     .header-right { text-align: left; margin-top: 12px; }
     .page-body { padding: 22px 16px 26px; }
+    .page-guide,
     .direction-hero,
     .solution-banner,
     .sales-cta-strip {
       display: block;
       padding: 18px;
     }
+    .page-guide-label { display: inline-block; margin-bottom: 8px; }
+    .page-guide-text { font-size: 13px; }
+    .direction-title { font-size: 23px; }
+    .direction-copy { font-size: 14px; }
     .solution-price { margin-top: 12px; text-align: left; }
     .trial-banner {
       display: block;
@@ -981,6 +1078,10 @@
   </div>
 
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">定額制バナー制作プランの概要と、契約後の制作進行を制作側に任せられることが分かります。</div>
+    </div>
 
     <div class="direction-hero">
       <div class="direction-label">定額制サービス｜制作進行サポート対応可能</div>
@@ -994,18 +1095,18 @@
     <div class="impact-grid">
       <div class="impact-card">
         <div class="impact-label">POINT 01</div>
-        <div class="impact-title">進行負担を減らせる</div>
-        <div class="impact-text">ヒアリング、依頼内容の整理、制作進行、修正確認、納品まで、原則制作側が主担当として進めます。</div>
+        <div class="impact-title">契約後の進行を任せやすい</div>
+        <div class="impact-text">ヒアリング後の整理、制作進行、修正対応、納品まで、制作側が主担当で進めます。</div>
       </div>
       <div class="impact-card">
         <div class="impact-label">POINT 02</div>
         <div class="impact-title">提案前に相談できる</div>
-        <div class="impact-text">店舗様の要望をどう形にするか、どこまで対応できるかを制作側で整理します。</div>
+        <div class="impact-text">枚数、契約期間、制作範囲で迷う場合も、事前に制作側へ確認できます。</div>
       </div>
       <div class="impact-card">
         <div class="impact-label">POINT 03</div>
         <div class="impact-title">継続売上につなげやすい</div>
-        <div class="impact-text">毎月の画像更新ニーズがある店舗様へ、スポットではなく定額制の継続提案として声をかけやすくなります。</div>
+        <div class="impact-text">毎月の画像更新ニーズがある店舗様へ、定額制の継続提案として案内できます。</div>
       </div>
     </div>
 
@@ -1030,16 +1131,6 @@
       </div>
     </div>
 
-    <div class="section-title">提案しやすい店舗様</div>
-    <div class="quick-targets">
-      <div class="quick-target">毎月バナー・SNS画像を更新したい店舗様</div>
-      <div class="quick-target">制作費用が高く、予算が読みにくい店舗様</div>
-      <div class="quick-target">季節イベントや月替わりの告知が多い店舗様</div>
-      <div class="quick-target">複数媒体の画像をまとめて整えたい店舗様</div>
-      <div class="quick-target">制作内容の相談先が欲しい店舗様</div>
-      <div class="quick-target">グループ店舗でまとめて活用したい場合</div>
-    </div>
-
   </div>
   <div class="page-footer">
     <div class="footer-brand">VOTEC</div>
@@ -1062,6 +1153,10 @@
   </div>
 
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">営業担当者様の受注後の負担がどこまで軽くなるか、これまでとの違いが分かります。</div>
+    </div>
 
     <div class="section-title">営業にとっての具体的なメリット</div>
     <div class="sales-merit-grid">
@@ -1108,26 +1203,6 @@
     </div>
     <div class="ba-conclusion">契約後の制作進行は制作側が主担当として進行します。営業担当者様には案件全体の状況をご確認いただきながら、必要に応じて店舗様へのフォローをお願いいたします。</div>
 
-    <div class="section-title">案件化しやすい切り口</div>
-    <div class="opportunity-grid">
-      <div class="opportunity-card">
-        <div class="opportunity-head">更新が止まっている店舗様</div>
-        <div class="opportunity-body">HP・SNS・媒体画像が古いままの場合、「毎月の制作枠」として提案しやすいです。</div>
-      </div>
-      <div class="opportunity-card">
-        <div class="opportunity-head">イベント告知が多い店舗様</div>
-        <div class="opportunity-body">季節イベント、求人、キャンペーン画像を、月ごとの制作枠として提案しやすいです。</div>
-      </div>
-      <div class="opportunity-card">
-        <div class="opportunity-head">都度見積もりで止まりやすい店舗様</div>
-        <div class="opportunity-body">定額制で費用感を伝えやすいため、予算相談の入口を作れます。</div>
-      </div>
-      <div class="opportunity-card">
-        <div class="opportunity-head">複数店舗を運営している店舗様</div>
-        <div class="opportunity-body">グループ内で制作枠を活用できるため、まとめ提案・追加提案につなげやすいです。</div>
-      </div>
-    </div>
-
   </div>
   <div class="page-footer">
     <div class="footer-brand">VOTEC</div>
@@ -1150,6 +1225,10 @@
   </div>
 
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">月額単価、契約期間、料金シミュレーションなど、提案前に確認したい料金条件が分かります。</div>
+    </div>
 
     <div class="section-title">料金面で提案しやすいポイント</div>
     <div class="quick-targets">
@@ -1268,6 +1347,10 @@
   </div>
 
   <div class="page-body">
+    <div class="page-guide">
+      <div class="page-guide-label">このページで分かること</div>
+      <div class="page-guide-text">事前相談から納品までの流れ、営業担当者様と制作側の役割分担、重要事項が分かります。</div>
+    </div>
 
     <div class="section-title">ご利用フロー</div>
     <p style="font-size:11px; color:var(--text-muted); margin-bottom:13px;">料金、契約期間、月間枚数、制作範囲などは、提案前に制作側へご相談いただけます。内容を整理したうえで見積もりを行い、契約・請求・入金確認・最終判断は営業担当者様および店舗様にてお願いいたします。</p>
